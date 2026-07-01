@@ -43,12 +43,14 @@ export function ValueCard({ emoji, title, index }: { emoji: string; title: strin
       }}
       whileHover={{ y: -6, scale: 1.02 }}
       transition={{ duration: 0.25 }}
-      className={`card-premium bg-gradient-to-br ${gradients[index % gradients.length]} p-8 flex flex-col items-center text-center gap-4 cursor-default group`}
+      className={`card-premium bg-gradient-to-br ${gradients[index % gradients.length]} p-6 sm:p-7 flex flex-col items-start gap-3 cursor-default group`}
     >
-      <div className={`icon-container w-16 h-16 text-3xl ${iconBgs[index % iconBgs.length]} rounded-2xl flex items-center justify-center`}>
+      {/* Icon — top left */}
+      <div className={`icon-container w-14 h-14 text-[26px] ${iconBgs[index % iconBgs.length]} rounded-2xl flex items-center justify-center flex-shrink-0`}>
         {emoji}
       </div>
-      <h3 className="text-[17px] font-700 text-[#111111] leading-snug">{title}</h3>
+      {/* Title — below icon */}
+      <h3 className="text-[16px] sm:text-[17px] font-bold text-[#111111] leading-snug">{title}</h3>
     </motion.div>
   );
 }
@@ -73,7 +75,7 @@ export function ValuesSection() {
           </p>
         </motion.div>
 
-        {/* Values Grid */}
+        {/* Values Grid — 2 cols on mobile, 3 on sm+ */}
         <motion.div
           initial="hidden"
           whileInView="visible"

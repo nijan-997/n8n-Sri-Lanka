@@ -167,26 +167,27 @@ function GuidelineCard({ guideline, index }: GuidelineCardProps) {
         {String(index + 1).padStart(2, "0")}
       </div>
 
-      {/* Header */}
-      <div className="flex items-start gap-4 relative">
-        <div className="icon-container bg-gradient-to-br from-[#FFF5F3] to-[#FFF0F5] border border-[#FFECEA] text-[22px] flex-shrink-0">
+      {/* Header — icon on top-left, title + tag + description stacked below */}
+      <div className="flex flex-col gap-3 relative">
+        {/* Icon */}
+        <div className="icon-container bg-gradient-to-br from-[#FFF5F3] to-[#FFF0F5] border border-[#FFECEA] text-[22px] self-start">
           {guideline.emoji}
         </div>
-        <div className="flex-1 min-w-0 pt-1">
-          <div className="flex flex-wrap items-center gap-2 mb-2">
-            <h3 className="text-[18px] sm:text-[19px] font-bold text-[#111111] leading-snug">
-              {guideline.title}
-            </h3>
-            {guideline.tag && (
-              <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${tagStyle.bg} ${tagStyle.text}`}>
-                {guideline.tag}
-              </span>
-            )}
-          </div>
-          <p className="text-[14px] sm:text-[15px] text-[#666666] leading-relaxed">
-            {guideline.description}
-          </p>
+        {/* Title row */}
+        <div className="flex flex-wrap items-center gap-2">
+          <h3 className="text-[18px] sm:text-[19px] font-bold text-[#111111] leading-snug">
+            {guideline.title}
+          </h3>
+          {guideline.tag && (
+            <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${tagStyle.bg} ${tagStyle.text}`}>
+              {guideline.tag}
+            </span>
+          )}
         </div>
+        {/* Description */}
+        <p className="text-[14px] sm:text-[15px] text-[#666666] leading-relaxed">
+          {guideline.description}
+        </p>
       </div>
 
       {/* Items list */}

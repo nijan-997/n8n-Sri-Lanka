@@ -71,19 +71,19 @@ export function ModerationSection() {
           whileHover={{ y: -2 }}
           className="callout-card relative overflow-hidden"
         >
-          {/* Background orbs */}
-          <div className="absolute top-0 right-0 w-64 h-64 orb orb-primary opacity-10 -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 orb orb-purple opacity-8 translate-y-1/2 -translate-x-1/2" />
+          {/* Background orbs — contained so they don't bleed outside */}
+          <div className="absolute top-0 right-0 w-48 h-48 orb orb-primary opacity-10 -translate-y-1/3 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-36 h-36 orb orb-purple opacity-8 translate-y-1/3 -translate-x-1/3" />
 
-          <div className="relative flex items-start gap-5">
-            <div className="flex-shrink-0 mt-1">
+          <div className="relative flex flex-col sm:flex-row items-start gap-4 sm:gap-5">
+            <div className="flex-shrink-0">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-pink-100 flex items-center justify-center">
                 <Quote className="w-4 h-4 text-[#FF6D5A]" />
               </div>
             </div>
             <div>
-              <p className="text-[19px] sm:text-[21px] font-semibold text-[#111111] leading-relaxed tracking-[-0.01em]">
-                "The moderation team will always act in the best interest of maintaining a safe, respectful, and valuable community for everyone."
+              <p className="text-[17px] sm:text-[21px] font-semibold text-[#111111] leading-relaxed tracking-[-0.01em]">
+                &ldquo;The moderation team will always act in the best interest of maintaining a safe, respectful, and valuable community for everyone.&rdquo;
               </p>
               <div className="mt-4 flex items-center gap-2">
                 <span className="text-lg">🇱🇰</span>

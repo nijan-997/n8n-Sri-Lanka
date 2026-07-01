@@ -7,7 +7,7 @@ const valueLabels = ["Learn", "Build", "Share", "Grow"];
 export function HeroSection() {
   return (
     <section
-      className="relative min-h-[92vh] flex flex-col items-center justify-center px-4 sm:px-6 pt-24 pb-16 overflow-hidden"
+      className="relative min-h-[92vh] flex flex-col items-center justify-center px-4 sm:px-6 pt-24 pb-16 overflow-hidden w-full"
       id="hero"
     >
       {/* Background gradient */}
@@ -20,11 +20,11 @@ export function HeroSection() {
       />
       <div
         className="orb orb-pink absolute"
-        style={{ width: 350, height: 350, top: "10%", right: "-10%", opacity: 0.25 }}
+        style={{ width: 350, height: 350, top: "10%", right: "-5%", opacity: 0.2 }}
       />
       <div
         className="orb orb-purple absolute"
-        style={{ width: 300, height: 300, bottom: "5%", left: "-5%", opacity: 0.2 }}
+        style={{ width: 300, height: 300, bottom: "5%", left: "-5%", opacity: 0.15 }}
       />
 
       {/* Noise overlay */}
